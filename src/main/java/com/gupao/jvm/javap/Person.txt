@@ -1,0 +1,42 @@
+Compiled from "Person.java"
+public class com.gupao.jvm.javap.Person {
+  public com.gupao.jvm.javap.Person();
+    Code:
+       0: aload_0       
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0       
+       5: ldc           #2                  // String dong
+       7: putfield      #3                  // Field name:Ljava/lang/String;
+      10: return        
+
+  public void say();
+    Code:
+       0: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: ldc           #5                  // String person say...
+       5: invokevirtual #6                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: return        
+
+  public static int calc(int, int);
+    Code:
+       0: iconst_3      //将int类型常量3压入操作数栈
+       1: istore_0      //将参数列表下标为0的值存入局部变量表
+       2: iload_0       //局部变量表0入栈
+       3: iload_1       //局部变量表1入栈
+       4: iadd          //在操作数栈，将两数字相加
+       5: istore_2      //将相加结果int类型存入操作数栈 下标标记为2
+       6: iload_2       //局部变量表2入栈
+       7: ireturn       //出栈，返方法调用地址
+
+  public static void order();
+    Code:
+       0: return        
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: iconst_1      
+       1: iconst_2      
+       2: invokestatic  #7                  // Method calc:(II)I
+       5: pop           
+       6: invokestatic  #8                  // Method order:()V
+       9: return        
+}
